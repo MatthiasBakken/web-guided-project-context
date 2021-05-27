@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { FamilyContext } from '../App';
 // render props pattern - old blah garbage
 // const Siblings = () => {
@@ -22,6 +22,7 @@ import { FamilyContext } from '../App';
 //   );
 // };
 const Siblings = () => {
+  const value = useContext(FamilyContext)
   return (
     <section className="parents">
       {family.siblings.map((p) => (
