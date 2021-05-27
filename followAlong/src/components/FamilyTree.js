@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 
+import { FamilyContext } from '../App'; 
+
 import Parents from "./Parents";
 import Siblings from "./Siblings";
 
 export default function FamilyTree() {
+  const family = useContext(FamilyContext) // where does this data come from?
   return (
     <section className="FamilyTree">
       <h1>{family.familyName}</h1>
