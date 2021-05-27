@@ -5,8 +5,8 @@ import { data } from "./data";
 import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
 
-const ContextObject = createContext()
-console.log(ContextObject);
+const FamilyContext = createContext()
+console.log(FamilyContext);
 
 export default function App() {
   const [families] = useState(data);
@@ -27,7 +27,11 @@ export default function App() {
           </button>
         ))}
       </section>
-      {activeFamily && <FamilyTree />}
+      {activeFamily && 
+      <FamilyContext.Provider>
+        <FamilyTree />
+      </FamilyContext.Provider>
+      }
     </div>
   );
 }
