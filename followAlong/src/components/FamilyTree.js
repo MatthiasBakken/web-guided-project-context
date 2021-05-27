@@ -6,6 +6,7 @@ import Parents from "./Parents";
 import Siblings from "./Siblings";
 
 export default function FamilyTree() {
+  // awesome new exciting.... EASY
   const family = useContext(FamilyContext) // where does this data come from?
   return (
     <section className="FamilyTree">
