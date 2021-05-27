@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 
 import { data } from "./data";
 
@@ -24,7 +24,7 @@ export default function App() {
           </button>
         ))}
       </section>
-      {activeFamily && <FamilyTree family={activeFamily} />}
+      {activeFamily && <FamilyTree />}
     </div>
   );
 }
