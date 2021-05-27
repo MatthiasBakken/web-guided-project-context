@@ -7,15 +7,14 @@ import Siblings from "./Siblings";
 
 export default function FamilyTree() {
   // awesome new exciting.... EASY
-  const family = useContext(FamilyContext) // where does this data come from?
-  console.log(family);
+  const value = useContext(FamilyContext) // where does this data come from?
   return (
     <section className="FamilyTree">
-      <h1>{family.familyName}</h1>
+      <h1>{value.activeFamily.familyName}</h1>
       <h2>Parents</h2>
 
       {/* Pass data down as a prop */}
-      <Parents family={family} />
+      <Parents family={value.activeFamily} />
 
       <div className="spacer" />
       <h2>Siblings</h2>
