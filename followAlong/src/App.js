@@ -28,7 +28,7 @@ export default function App() {
         ))}
       </section>
       {activeFamily && 
-      <FamilyContext.Provider>
+      <FamilyContext.Provider value={activeFamily}>
         <FamilyTree />
       </FamilyContext.Provider>
       }
